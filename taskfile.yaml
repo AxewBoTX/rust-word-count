@@ -1,0 +1,10 @@
+version: "3"
+
+interval: 500ms
+
+tasks:
+  dev:
+    - cargo build
+    - ./target/debug/wc {{.CLI_ARGS}}
+  test:
+    - cargo test -- --nocapture {{.CLI_ARGS}}
