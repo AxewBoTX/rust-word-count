@@ -1,0 +1,10 @@
+name: rust-word-count
+
+services:
+  rust-word-count:
+    container_name: rust-word-count
+    build:
+      context: .
+      dockerfile: dev.dockerfile
+    volumes:
+      - .:/usr/src/app

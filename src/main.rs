@@ -150,16 +150,7 @@ pub fn get_file_info(
             {
                 // words
                 if options.1 == true {
-                    contents
-                        .strip_suffix("\n")
-                        .unwrap()
-                        .split("\n")
-                        .collect::<Vec<_>>()
-                        .join(" ")
-                        .split(" ")
-                        .filter(|word| !word.is_empty())
-                        .collect::<Vec<_>>()
-                        .len()
+                    contents.split_whitespace().count()
                 } else {
                     0
                 }
